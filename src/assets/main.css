@@ -1,0 +1,29 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+
+    margin: 0;
+    background-color: hsl(210, 46%, 95%);
+
+}
+
+.main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+h1{
+
+    color: hsl(217, 19%, 35%);
+    margin: 0;
+    font-size: 1.2rem;
+
+}
