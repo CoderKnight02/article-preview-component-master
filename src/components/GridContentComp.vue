@@ -41,7 +41,10 @@
                 <p>share</p>
                 <img src="../assets/images/icon-facebook.svg" alt="facebook">    
                 <img src="../assets/images/icon-pinterest.svg" alt="pinterest">    
-                <img src="../assets/images/icon-twitter.svg" alt="tweeter">    
+                <img src="../assets/images/icon-twitter.svg" alt="tweeter"> 
+                <div class="share2">
+                    <img id="share" src="../assets/images/icon-share.svg" alt="Share">
+                </div>    
             </div>
             
 
@@ -90,7 +93,7 @@
                 
             }
 
-            .share {
+            .share, .share2 {
                 width: 30px;
                 height: 30px;
                 display: flex;
@@ -133,6 +136,27 @@
         background-color: rgb(45, 45, 45);
         border-radius: 10px;
         padding-inline: 35px;
+
+        @media (max-width: 825px){
+            border-radius: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            position: absolute;
+            left: -30px;
+            top: unset;
+            bottom: -30px;
+            height: 0;
+            width: min(400px, 90vw);
+
+            scale: 1;
+            transform: translateY(0);
+            transition: height .3s;
+            
+
+            &::after{
+                visibility: hidden;
+            }
+        }
     
         // ESTADOS DE LA VENTANA MODAL
 
@@ -151,10 +175,22 @@
     }
 
     .places-activo{
-        
+
         visibility: visible;
         opacity: 1;
         transform: scale(1);
+
+        @media (max-width: 825px){
+            height: 82px;
+
+        }
+    }
+    .share2{
+        display: none !important;
+        // visibility: hidden;
+        @media (max-width: 825px){
+            display: flex !important;
+        }
     }
 
     

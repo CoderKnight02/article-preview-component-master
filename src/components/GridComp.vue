@@ -30,17 +30,28 @@
         border-radius: 10px;
 
         .grid-img{
-            object-fit: contain;
-            object-position: center;
             
             img{
+                object-position: top ;
+                object-fit: cover;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
                 width: 100%;
                 height: 100%;
+                @media (max-width: 825px){
+                    height: 280px;
+                    border-radius: 0;
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                    
+                }
             }
+
         }
-    
+        @media (max-width: 825px) {
+            grid-template-columns: auto;
+            width: min(400px, 90vw) ;
+        }
     }
 
 
