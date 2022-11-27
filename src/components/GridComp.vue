@@ -22,6 +22,7 @@
 </template>
 
 <style lang="scss">
+
     .grid-card{
         background-color: white;
         display: grid;

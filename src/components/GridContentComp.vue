@@ -33,15 +33,15 @@
                 <img src="../assets/images/avatar-michelle.jpg" alt="Michelle">
             </div>
             <div>
-                <p>Michelle Appleton</p>
+                <p class="avatar-name">Michelle Appleton</p>
                 <p>28 Jun 2022</p>
             </div>
             
             <div class="places" :class="{'places-activo': activo}">
                 <p>share</p>
-                <img src="../assets/images/icon-facebook.svg" alt="facebook">    
-                <img src="../assets/images/icon-pinterest.svg" alt="pinterest">    
-                <img src="../assets/images/icon-twitter.svg" alt="tweeter"> 
+                <a href="https://www.frontendmentor.io/home"><img src="../assets/images/icon-facebook.svg" alt="facebook"></a>    
+                <a href="https://www.frontendmentor.io/home"><img src="../assets/images/icon-pinterest.svg" alt="pinterest"></a>    
+                <a href="https://www.frontendmentor.io/home"><img src="../assets/images/icon-twitter.svg" alt="tweeter"></a> 
                 <div class="share2">
                     <img id="share" src="../assets/images/icon-share.svg" alt="Share">
                 </div>    
@@ -100,6 +100,9 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 50%;
+                background:  hsl(217, 19%, 35%);
+                // background:  hsl(214, 17%, 51%);
+                // background:  hsl(212, 23%, 69%);
                 background:  hsl(210, 46%, 95%);
                 margin-left: auto;
                 margin-right: 20px;
@@ -133,11 +136,14 @@
         position: absolute;
         right: -80px;
         top: -50px;
-        background-color: rgb(45, 45, 45);
+        // background-color: rgb(45, 45, 45);
+        background:  hsl(216, 14%, 29%);
+
         border-radius: 10px;
         padding-inline: 35px;
 
         @media (max-width: 825px){
+
             border-radius: 0;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
@@ -150,7 +156,7 @@
 
             scale: 1;
             transform: translateY(0);
-            transition: height .3s;
+            transition: all .3s;
             
 
             &::after{
@@ -166,7 +172,9 @@
             bottom: -10px;
             content: '';
             background: white;
-            border-top: 10px solid rgb(45, 45, 45);
+            border-top: 10px solid hsl(216, 14%, 29%);
+            
+
             border-left: 10px solid transparent;
             border-bottom: none;
             border-right: 10px solid transparent;
@@ -181,7 +189,7 @@
         transform: scale(1);
 
         @media (max-width: 825px){
-            height: 82px;
+            height: 83px;
 
         }
     }
@@ -190,7 +198,18 @@
         // visibility: hidden;
         @media (max-width: 825px){
             display: flex !important;
+            img{
+                color: white;
+            }
         }
+    }
+
+    .avatar-name{
+        color: hsl(217, 19%, 35%);
+        font-weight: 700;
+    }
+    .avatar-name ~ p{
+        color: hsl(214, 17%, 51%);
     }
 
     
